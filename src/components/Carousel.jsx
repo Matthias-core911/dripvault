@@ -13,7 +13,7 @@ const Carousel = () => {
                             <img
                               src="images/9fc3045e-6e22-4e42-983f-f1f51144a5f8.png"
                               className="d-block w-100"
-                              alt="streetwear drip" style={{height:"750px", width:"1000px", objectFit:"cover"} }
+                              alt="streetwear drip" style={{height:"750px", width:"1000px", objectFit:"contain"} }
                             />
 
                             <div className="carousel-caption hero-caption text-start">
