@@ -35,7 +35,8 @@ const Signin =()=>{
                 setSuccess(response.data.message)
             }
         } catch (error) {
-            
+            setError(error.message)
+            setLoading("")
         }
     }
     return(
@@ -52,7 +53,7 @@ const Signin =()=>{
             <input type="email" className="form-control" placeholder="Email" onChange={(e)=>setEmail(e.target.value)}/><br/>
             <input type="text" className="form-control" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/><br/>
             <button type="Submit" className="btn btn-success w-100">Sign in</button>
-            <p>Don't have an account?<a href="Sign up">Sign Up</a></p>
+            <p>Don't have an account?<Link to="/signup">Sign Up</Link></p>
           </form>
         </div>
        </div>

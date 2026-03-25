@@ -26,7 +26,8 @@ const Addproduct =()=>{
         setSuccess(response.data.message)
         setLoading("")
     }catch(error){
-
+        setError(error.message)
+        setLoading("")
     }
     }
     return(
@@ -36,7 +37,7 @@ const Addproduct =()=>{
             {/* binding the states here */}
               <h2 className="text-warning">{loading}</h2>
               <h2 className="text-success">{success}</h2>
-              <h2 className="text-danger">{Error}</h2>
+              <h2 className="text-danger">{error}</h2>
             <form action="" onSubmit={handlesubmit} >
                 <input type="text" className="form-control" placeholder="Enter product name" onChange={(e)=>setProductName(e.target.value)} /><br/>
                 <textarea name="" id="" className="form-control" placeholder="Enter Product description" onChange={(e)=>setProductDescription(e.target.value)}></textarea><br/>

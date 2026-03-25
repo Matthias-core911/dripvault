@@ -42,7 +42,7 @@ const Mpesapayment =()=>{
                 {/* bind the states here */}
                  <h2 className="text-warning">{loading}</h2>
                  <h2 className="text-success">{success}</h2>
-                 <h2 className="text-danger">{Error}</h2>
+                 <h2 className="text-danger">{error}</h2>
                 
                 <form action="" onSubmit={handlesubmit}>
                     <input type="number" className="form-control" placeholder="Enter phone number 254XXXXXXXXX"  onChange={(e)=>setPhone(e.target.value)}/><br />

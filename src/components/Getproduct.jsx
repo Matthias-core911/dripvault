@@ -2,7 +2,7 @@ import axios from "axios"
 import React,{useEffect, useState} from "react"
 import { useNavigate } from "react-router-dom"
 import Carousel from "./Carousel";
-import { CardBody } from "react-bootstrap";
+
 
 const Getproduct =()=>{
     let navigate = useNavigate();
@@ -18,7 +18,8 @@ const Getproduct =()=>{
             setProducts(response.data)
             setLoading("")
         } catch (error) {
-            
+            setError(error.message)
+            setLoading("")
         }
     }
     // call the function
